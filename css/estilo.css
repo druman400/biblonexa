@@ -367,3 +367,76 @@ body.dark-mode #themeToggle {
     flex-direction: column;
   }
 }
+
+/* =========================================
+   AUTENTICACIÓN (LOGIN / REGISTRO)
+   ========================================= */
+
+.auth-container {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.auth-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-title {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.alert {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.alert-info {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.auth-links {
+  margin-top: 1.2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.auth-links a {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.user-name {
+  color: var(--accent-green);
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+body.dark-mode .alert-error {
+  background: #450a0a;
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+
+body.dark-mode .alert-info {
+  background: #172554;
+  color: #93c5fd;
+  border-color: #1e40af;
+}
