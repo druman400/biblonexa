@@ -1,0 +1,369 @@
+/* =========================================
+   BIBLONEXA - ESTILOS PRINCIPALES
+   ========================================= */
+
+/* Variables */
+:root {
+  --bg-primary: #ffffff;
+  --bg-card: #f8fafc;
+  --bg-navbar: #ffffff;
+  --accent-blue: #0284c7;
+  --accent-green: #059669;
+  --text-main: #222222;
+  --text-muted: #64748b;
+  --border-color: #cbd5e1;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* =========================================
+   MODO OSCURO
+   ========================================= */
+
+body.dark-mode {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-navbar: #0b1120;
+  --accent-blue: #38bdf8;
+  --accent-green: #10b981;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+/* =========================================
+   BOTÓN MODO CLARO / OSCURO
+   ========================================= */
+
+#themeToggle {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #222222;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.03);
+}
+
+body.dark-mode #themeToggle {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: var(--bg-navbar);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: var(--accent-blue);
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+}
+
+.navbar nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--text-main);
+}
+
+.btn-nav {
+  background-color: var(--accent-blue);
+  color: #0f172a !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* =========================================
+   HERO / BUSCADOR
+   ========================================= */
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-box input,
+.search-box select {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  color: var(--text-main);
+  border-radius: 8px;
+  outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.search-box input {
+  flex: 2;
+}
+
+.search-box select {
+  flex: 1;
+}
+
+.search-box button,
+.btn-primary {
+  background: var(--accent-blue);
+  border: none;
+  padding: 12px 20px;
+  color: #0f172a;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.search-box button:hover,
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* =========================================
+   LAYOUT PRINCIPAL
+   ========================================= */
+
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.badge.pdf {
+  background: #ef4444;
+  color: white;
+}
+
+.badge.docx {
+  background: #3b82f6;
+  color: white;
+}
+
+.card-author {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.card-category {
+  font-size: 0.8rem;
+  color: var(--accent-blue);
+  margin-bottom: 15px;
+}
+
+.btn-card {
+  background: transparent;
+  border: 1px solid var(--accent-blue);
+  color: var(--accent-blue);
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-card:hover {
+  background: var(--accent-blue);
+  color: #0f172a;
+}
+
+/* =========================================
+   FORMULARIO DE CARGA
+   ========================================= */
+
+.upload-sidebar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  height: fit-content;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.upload-form input,
+.upload-form select {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  color: var(--text-main);
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.file-dropzone {
+  border: 2px dashed var(--border-color);
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+.file-dropzone input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  margin-top: 10px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   RESPONSIVO PARA CELULARES
+   ========================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar nav a {
+    display: inline-block;
+    margin: 5px 8px;
+  }
+
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+}
